@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1 style="text-align:center">CRUD Application</h1>
+  </head>
+  <body>
+    <h1 style="text-align: center">CRUD Application</h1>
     <h1>Add User</h1>
-    <form >
-        User Id <input  type="text" id="userid" name=""/>
+    <form action="/addUser" method="post">
+      User Id <input type="text" id="userid" name="userid" /> Name
+      <input type="text" id="username" name="username" /> DOB
+      <input type="text" id="dob" name="dob" /> Profession
+      <input type="text" id="profession" name="profession" />
+      <button type="submit" name="submit">Add User</button>
     </form>
-</body>
+    <h1>Get Specific User Details</h1>
+    <form action="/particularUser" method="post">
+      User ID <input type="text" id="userId" name="userId" />
+      <button type="submit" name="submit">Get User Info</button>
+    </form>
+    <h1>Delete User Details</h1>
+    <form action="/deleteUser" method="post">
+      User ID <input type="text" id="UserId" name="UserId" />
+      <button type="submit" name="submit">Delete User Info</button>
+    </form>
+  </body>
 </html>
